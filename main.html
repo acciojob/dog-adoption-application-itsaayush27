@@ -8,89 +8,51 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         form {
-            max-width: 400px;
             background: white;
             padding: 20px;
             border-radius: 8px;
-            margin: 50px auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 300px;
         }
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-            color: #555;
-        }
-        input[type="text"],
-        select {
+        input, select {
             width: 100%;
             padding: 8px;
+            margin: 8px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
-            margin-bottom: 15px;
         }
         input[type="checkbox"] {
-            margin-right: 8px;
+            width: auto;
+            margin-right: 10px;
         }
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        select[multiple] {
-            height: 100px;
+        label {
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
     <form>
-        <h2>Dog Adoption Application</h2>
-
-        <!-- Name Field -->
-        <label for="name">Name:</label>
         <input id="name" type="text" placeholder="Name">
-
-        <!-- Phone Number Field -->
-        <label for="phone">Phone Number:</label>
         <input id="phone" type="text" placeholder="Phone Number">
-
-        <!-- Address Field -->
-        <label for="address">Address:</label>
         <input id="address" type="text" placeholder="Address">
-
-        <!-- Checkbox -->
-        <label>
-            <input type="checkbox" id="dog" value="Have you ever lived with a Dog before?">
-            Have you ever lived with a Dog before?
-        </label>
-
-        <!-- Multi-select -->
-        <label for="breeds">Please select your preferred breeds:</label>
-        <select id="breeds" multiple>
+        
+        <input id="checkbox" type="checkbox" value="Have you ever lived with a Dog before?">
+        <label for="checkbox">Have you ever lived with a Dog before?</label>
+        
+        <select id="multiSelect" multiple>
             <option>Golden Retriever</option>
             <option>Labrador</option>
             <option>German Shepherd</option>
-            <option>Beagle</option>
-            <option>Poodle</option>
         </select>
-
-        <!-- Submit Button -->
-        <input type="submit" value="Submit">
+        
+        <input id="submit" type="submit" value="Submit">
     </form>
 
 </body>
